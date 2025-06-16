@@ -1,0 +1,120 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <link
+      href="https://cdn.jsdelivr.net/npm/bootstrap@5.0.2/dist/css/bootstrap.min.css"
+      rel="stylesheet"
+      integrity="sha384-EVSTQN3/azprG1Anm3QDgpJLIm9Nao0Yz1ztcQTwFspd3yD65VohhpuuCOmLASjC"
+      crossorigin="anonymous" />
+    <title>Student Register</title>
+    <style>
+      .error-type {
+        color: rgb(255, 2, 2);
+        font-size: 1rem;
+        font-weight: 600;
+        letter-spacing: 0.7px;
+      }
+    </style>
+  </head>
+  <body>
+    <div class="container bg-dark mt-5">
+      <div class="p-5 m-5 text-light">
+        <h1 class="text-center mb-5 fw-bolder">Student Register</h1>
+        <div class="row mb-3">
+          <div class="col-md-6">
+            <input type="hidden" id="indexUpdate">
+            <label for="firstName" class="form-label">First Name</label>
+            <input
+              type="text"
+              class="form-control shadow-sm"
+              id="firstName"
+              value=""
+              placeholder="Enter first name" />
+            <span class="error-first-name error-type"></span>
+          </div>
+          <div class="col-md-6">
+            <label for="lastName" class="form-label">Last Name</label>
+            <input
+              type="text"
+              class="form-control shadow-sm"
+              id="lastName"
+              value=""
+              placeholder="Enter last name" />
+            <span class="error-last-name error-type"></span>
+          </div>
+        </div>
+
+        <div class="mb-3">
+          <label for="email" class="form-label">Email address</label>
+          <input
+            type="email"
+            class="form-control shadow-sm"
+            id="email"
+            value=""
+            placeholder="Enter email" />
+          <span class="error-email error-type"></span>
+        </div>
+
+        <div class="mb-3">
+          <label for="phone" class="form-label">Phone Number</label>
+          <input
+            type="tel"
+            class="form-control shadow-sm"
+            id="phone"
+            value=""
+            placeholder="Enter phone number" />
+
+          <span class="error-phone-number error-type"></span>
+        </div>
+
+        <div class="mb-3">
+          <label for="password" class="form-label">Gender</label>
+          <select name="gender" id="gender">
+            <option class="form-control" value="male">Male</option>
+            <option class="form-control" value="female">Female</option>
+          </select>
+          <span class="error-gender error-type"></span>
+        </div>
+
+        <div class="d-flex justify-content-end">
+          <button
+            id="btn-save"
+            type="submit"
+            value="Send"
+            name="Submit"
+            class="btn btn-primary me-2 px-5 shadow-sm">
+            Save
+          </button>
+          <button
+            id="btn-cencel"
+            type="reset"
+            class="btn btn-warning px-4 shadow-sm">
+            Cancel
+          </button>
+        </div>
+      </div>
+    </div>
+    <div class="container">
+      <table class="table table-dark table-striped">
+        <thead>
+          <tr>
+            <th>First Name</th>
+            <th>Last Name</th>
+            <th>Email Address</th>
+            <th>Phone Number</th>
+            <th>Gender</th>
+            <th>Option</th>
+          </tr>
+        </thead>
+        <tbody class="table-display"></tbody>
+      </table>
+    </div>
+    <script
+      src="https://cdn.jsdelivr.net/npm/bootstrap@5.0.2/dist/js/bootstrap.bundle.min.js"
+      integrity="sha384-MrcW6ZMFYlzcLA8Nl+NtUVF0sA7MsXsP1UyJoMp4YLEuNSfAP+JcXn/tWtIaxVXM"
+      crossorigin="anonymous"></script>
+    <script src="./validate.js"></script>
+  </body>
+</html>
